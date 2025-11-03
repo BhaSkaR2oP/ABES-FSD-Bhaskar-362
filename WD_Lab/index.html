@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Web Site Name</title>
+  <title>BOOKSTORE</title>
 </head>
-<frameset rows="120, *" border="2" framespacing="2" frameborder="2">
-    <frame src="top_frame.html" name="topFrame" scrolling="no" noresize="noresize" />
-    <frameset cols="21.5%, 85%">
-        <frame src="left_frame.html" name="leftFrame" scrolling="no" />
-        <frame src="main_frame.html" name="mainFrame" />
-    </frameset>
-</frameset>
+<body>
+      <iframe src="top_frame.html" name="topFrame" width="100%" height="150"></iframe>
+<table border="1" width="100%" height="80%">
+  <tr>
+    <td width="20%">
+      <iframe src="left_frame.html" name="leftFrame" width="100%" height="500"></iframe>
+    </td>
+    <td width="80%">
+      <iframe src="main_frame.html" name="rightFrame" width="100%" height="500"></iframe>
+    </td>
+  </tr>
+</table>
+
+</body>
 </html>

@@ -3,18 +3,22 @@
 <head>
     <title>Navigation</title>
     <style>
-        body { font-family: sans-serif; margin: 0; }
+        body { 
+            font-family: sans-serif; 
+            margin: 0; 
+            /* Added background color to make the frame distinct */
+            background-color: #F0F8FF; 
+        }
         table { border-collapse: collapse; }
         td { padding: 10px; }
-        a { text-decoration: none; color: black; }
+        a { text-decoration: none; color: black; display: block; }
     </style>
 </head>
 <body>
-    <table border="2" width="100%" cellspacing="5">
-        <tr><td style="border-bottom: 1px solid black;"><a href="CSE.html" target="mainFrame">CSE</a></td></tr>
-        <tr><td style="border-bottom: 1px solid black;"><a href="ECE.html" target="mainFrame">ECE</a></td></tr>
-        <tr><td style="border-bottom: 1px solid black;"><a href="ECE.html" target="mainFrame">EEE</a></td></tr>
-        <tr><td style="border-bottom: 1px solid black;"><a href="CIVIL.html" target="mainFrame">CIVIL</a></td></tr>
+    <table border="1" width="100%" cellspacing="1"> <tr><td style="border-bottom: 1px solid #ccc;"><a href="CSE.html" target="rightFrame">CSE</a></td></tr>
+        <tr><td style="border-bottom: 1px solid #ccc;"><a href="ECE.html" target="rightFrame">ECE</a></td></tr>
+        <tr><td style="border-bottom: 1px solid #ccc;"><a href="EEE.html" target="rightFrame">EEE</a></td></tr>
+        <tr><td style="border-bottom: 1px solid #ccc;"><a href="CIVIL.html" target="rightFrame">CIVIL</a></td></tr>
     </table>
 </body>
 </html>
