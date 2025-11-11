@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Amazon Clone</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header class="site-header">
+  <div class="header-top">
+    <a class="logo" href="#"><img src="images/logo.png" alt="ShopZone logo"></a>
+    <button class="hamburger" aria-label="Open menu" onclick="toggleMobileMenu()">☰</button>
+    <form class="search" action="#" role="search" aria-label="Search products">
+      <select class="search-cat" aria-label="Category"><option>All</option><option>Electronics</option></select>
+      <input class="search-input" type="search" placeholder="Search products, brands and more">
+      <button class="search-btn" type="submit">Search</button>
+    </form>
+    <nav class="user-actions" aria-label="User">
+      <a href="#" class="action">Hello, Sign in</a>
+      <a href="#" class="action">Orders</a>
+      <a href="#" class="cart">Cart <span class="cart-count">0</span></a>
+    </nav>
+  </div>
+  <div class="header-bottom">
+    <ul class="main-nav" role="navigation" aria-label="Main">
+      <li><a href="#">Today's Deals</a></li>
+      <li><a href="#">Customer Service</a></li>
+      <li><a href="#">Gift Cards</a></li>
+      <li><a href="#">Sell</a></li>
+      <li><a href="#">Registry</a></li>
+    </ul>
+  </div>
+</header>
+<script>
+function toggleMobileMenu(){
+  const mainNav = document.querySelector('.main-nav');
+  const userNav = document.querySelector('.user-actions');
+  if(window.getComputedStyle(mainNav).display === 'none'){
+    mainNav.style.display = 'flex';
+    userNav.style.display = 'flex';
+  } else {
+    mainNav.style.display = 'none';
+    userNav.style.display = 'none';
+  }
+}
+window.addEventListener('resize', ()=> {
+  const mainNav = document.querySelector('.main-nav');
+  const userNav = document.querySelector('.user-actions');
+  if(window.innerWidth > 980){
+    mainNav.style.display = ''; userNav.style.display = '';
+  }
+});
+</script>
+  <main class="container">
+    <aside class="sidebar">
+      <section class="category">
+        <h3>Departments</h3>
+        <ul>
+          <li><a href="#">Electronics</a></li>
+          <li><a href="#">Computers</a></li>
+          <li><a href="#">Books</a></li>
+          <li><a href="#">Home & Kitchen</a></li>
+          <li><a href="#">Fashion</a></li>
+          <li><a href="#">Sports</a></li>
+        </ul>
+      </section>
+      <section class="filter">
+        <h3>Filter</h3>
+        <label><input type="checkbox" /> Prime Eligible</label>
+        <label><input type="checkbox" /> Free Delivery</label>
+        <label><input type="checkbox" /> New Arrivals</label>
+      </section>
+      <section class="promo">
+        <h3>Top Picks</h3>
+        <div class="promo-card">
+          <img src="images/promo1.png" alt="promo" />
+          <p>Smart Speaker — from $29.99</p>
+        </div>
+      </section>
+    </aside>
+    <section class="content">
+      <div class="hero-banner">
+        <img src="images/hero.jpg" alt="hero banner" />
+      </div>
+      <section class="product-grid" aria-label="Products">
+        <article class="product-card">
+          <img src="images/product1.jpg" alt="Product 1" />
+          <h4 class="product-title">Wireless Headphones</h4>
+          <div class="product-rating">★★★★☆ <span class="reviews">(1,342)</span></div>
+          <div class="product-price">$49.99</div>
+          <button class="btn btn-primary">Add to Cart</button>
+        </article>
+        <article class="product-card">
+          <img src="images/product2.jpg" alt="Product 2" />
+          <h4 class="product-title">Smart Watch</h4>
+          <div class="product-rating">★★★☆☆ <span class="reviews">(893)</span></div>
+          <div class="product-price">$79.00</div>
+          <button class="btn btn-primary">Add to Cart</button>
+        </article>
+        <article class="product-card">
+          <img src="images/product3.jpg" alt="Product 3" />
+          <h4 class="product-title">Best-selling Novel</h4>
+          <div class="product-rating">★★★★★ <span class="reviews">(4,512)</span></div>
+          <div class="product-price">$12.50</div>
+          <button class="btn btn-primary">Add to Cart</button>
+        </article>
+        <article class="product-card">
+          <img src="images/product4.jpg" alt="Product 4" />
+          <h4 class="product-title">Kitchen Blender</h4>
+          <div class="product-rating">★★★★☆ <span class="reviews">(651)</span></div>
+          <div class="product-price">$39.00</div>
+          <button class="btn btn-primary">Add to Cart</button>
+        </article>
+        <article class="product-card">
+          <img src="images/product5.jpg" alt="Product 5" />
+          <h4 class="product-title">Running Shoes</h4>
+          <div class="product-rating">★★★★☆ <span class="reviews">(2,191)</span></div>
+          <div class="product-price">$59.99</div>
+          <button class="btn btn-primary">Add to Cart</button>
+        </article>
+        <article class="product-card">
+          <img src="images/product6.jpg" alt="Product 6" />
+          <h4 class="product-title">Bluetooth Speaker</h4>
+          <div class="product-rating">★★★☆☆ <span class="reviews">(478)</span></div>
+          <div class="product-price">$24.99</div>
+          <button class="btn btn-primary">Add to Cart</button>
+        </article>
+      </section>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h4>Get to Know Us</h4>
+        <a href="#">About</a><a href="#">Careers</a><a href="#">Press</a>
+      </div>
+      <div class="footer-col">
+        <h4>Make Money with Us</h4>
+        <a href="#">Sell on Amazon</a><a href="#">Affiliate Program</a>
+      </div>
+      <div class="footer-col">
+        <h4>Let Us Help You</h4>
+        <a href="#">Your Account</a><a href="#">Returns Centre</a><a href="#">Help</a>
+      </div>
+    </div>
+    <div class="copy">© <span id="year"></span> Amazon Clone</div>
+  </footer>
+</body>
+</html>

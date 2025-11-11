@@ -1,21 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Welcome</title>
-    <style>
-        body, html {
-            height: 100%;
-            margin: 0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-family: sans-serif;
-            color: #555;
-            background-color: white;
-        }
-    </style>
+  <meta charset="utf-8">
+  <title>Bookstore</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2>Description of the WebSite</h2>
+  <div class="header-box">
+    <h1>Bookstore</h1>
+    <p style="margin:6px 0 0;">CSS: background-repeat & link state demo integrated with the bookstore</p>
+  </div>
+  <div class="content-box">
+    <div class="demo-box">
+      <h3>Background Repeat Demonstration</h3>
+      <p>
+        This decorative strip (above) is set to <code>repeat-x</code> — it repeats horizontally across the box.
+        The page background is set to <code>no-repeat</code> and covers the viewport.
+      </p>
+    </div>
+    <div class="link-demo">
+      <h3>Link State Demonstration</h3>
+      <p>Click and hover these links to observe changes:</p>
+      <ul>
+        <li><a href="index.html" target="_top">Bookstore Home (a:link)</a></li>
+        <li><a href="catalogue.html" target="rightFrame">Catalogue (a:visited after you click)</a></li>
+        <li><a href="https://example.com" target="_blank">External link (hover/active demo)</a></li>
+      </ul>
+      <p style="font-size:0.9em; color:#555; margin-top:8px;">
+        Note: <em>a:visited</em> will appear only after you visit that URL in your browser.
+      </p>
+    </div>
+  </div>
+  <div style="width:100%; display:flex; justify-content:center; margin-top:12px;">
+    <div class="side-pattern" style="width:120px; height:160px; padding:12px;">
+      <small>Pattern (repeat-y)</small>
+    </div>
+  </div>
 </body>
 </html>
